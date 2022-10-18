@@ -109,6 +109,14 @@ var clientChatPageVariables = (function () {
                                         $('#min_agent_image').hide();
                                         $('#header-avatar, #sp-close-frame, #chat-body, #inner-chat, #sp-drag-handle, .conversationOptions').addClass('narrow');
                                     }
+
+                                    window.parent.postMessage(JSON.stringify({
+                                        type: 'bp-update-agent-data',
+                                        data: {
+                                            name: window.chatSession.internalParty ? window.chatSession.internalParty.displayName : definition.chatWidgetStyling.title,
+                                            url: (showAgentPic === 'show' || showAgentPic === 'always_default') ? url : undefined
+                                        }
+                                    }), '*');
                                 }
                             }
                         });

@@ -298,7 +298,7 @@ var clientChatUiAppendLog = (function() {
                     '</div>';
 
                 $('#min_messages').append(popupMsgTmpl);
-                commonUtilService.updateParentDimensions({ height: { auto: true }, width: { auto: true } });
+                commonUtilService.updateParentDimensions({ height: { auto: true } });
             }
 
             var tmpl = '';

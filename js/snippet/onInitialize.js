@@ -469,6 +469,18 @@ var snippetOnInitialize = function () {
                     } else {
                         console.log('@@@ SKIP bp-dimensions');
                     }
+                } else if (parsed.type === 'bp-update-agent-data') {
+                    var minAgentName = document.getElementById('min_agent_name');
+                    var minAgentImage = document.getElementById('min_agent_image');
+                    if (parsed.data.name && minAgentName && minAgentImage) {
+                        minAgentName.textContent = minAgentName;
+                        if (parsed.data.url) {
+                            minAgentImage.style.display = 'block';
+                            minAgentImage.style.background = 'url(' + parsed.data.url + ') center center no-repeat';
+                        } else {
+                            minAgentImage.style.display = 'none';
+                        }
+                    }
                 } else if (parsed.message === 'bp-show-close-chat-dialog') {
                     const confirm = window.confirm(parsed.text)
                     if (confirm) {

@@ -426,8 +426,8 @@ div#togetherjs-dock.togetherjs-dock-right {
     transform: scale(1);
 }
 
-[class*=position_right] .sp-round-button > svg,
-[class*=position_left] .sp-round-button > svg {
+#sp-chat-widget[class*=position_right] .sp-round-button > svg,
+#sp-chat-widget[class*=position_left] .sp-round-button > svg {
     transform: rotate(90deg);
 }
 
