@@ -531,7 +531,7 @@ div#togetherjs-dock.togetherjs-dock-right {
     width: 28px;
     height: 28px;
     border-radius: 50%;
-    background-size: contain;
+    background-size: cover;
 }
 
 [class*=position_left] .min-agent-image,
