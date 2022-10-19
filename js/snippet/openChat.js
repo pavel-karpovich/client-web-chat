@@ -34,6 +34,8 @@ var snippetOpenChat = function (open, deleteIframe, startSession) {
         }
     }
 
+    console.log('### openChat: open ?', open);
+
     var fr=document.querySelector('#sp-chat-frame'),
         wi = document.querySelector('#sp-chat-widget'),
         fakeTo = open ? fr : wi,

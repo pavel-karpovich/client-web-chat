@@ -453,7 +453,6 @@ var snippetOnInitialize = function () {
                 var parsed = JSON.parse(data);
                 if (parsed.type === 'bp-dimensions' && !window.__bpap) {
                     if (sessionStorage.getItem('bp-minimized')) {
-                        console.log('@@@ get bp-dimensions: ', parsed.data);
                         if (parsed.data.height) {
                             /** special case for min snippet without unread messages */
                             if (parsed.data.height === '0px' || parsed.data.height === '0') {

@@ -292,7 +292,6 @@ var commonUtilService = (function () {
             if (cmpStyle.display === 'none' || cmpStyle.height === 'auto') {
                 return setTimeout(updateCall, 50);
             }
-            console.log('@@@ update parent dimensions with: ', data);
             var currentMsgNumber = Number(sessionStorage.getItem('bp-min-message-counter'));
             parent.postMessage(JSON.stringify({
                 type: 'bp-dimensions',
