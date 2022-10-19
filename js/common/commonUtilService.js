@@ -293,10 +293,11 @@ var commonUtilService = (function () {
                 return setTimeout(updateCall, 50);
             }
             console.log('@@@ update parent dimensions with: ', data);
+            var currentMsgNumber = Number(sessionStorage.getItem('bp-min-message-counter'));
             parent.postMessage(JSON.stringify({
                 type: 'bp-dimensions',
                 data: {
-                    height: ((data.height && data.height.value) ? data.height.value : (data.height && data.height.auto) ? boundingRect.height + 'px' : undefined),
+                    height: ((data.height && data.height.value) ? data.height.value : (data.height && data.height.auto) ? currentMsgNumber > 0 ? boundingRect.height + 'px' : '0' : undefined),
                     width: ((data.width && data.width.value) ? data.width.value : (data.width && data.width.auto) ? (cmpStyle.width !== 'auto' ? boundingRect.width + 'px' : undefined) : undefined)
                 }
             }), '*');

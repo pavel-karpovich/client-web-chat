@@ -506,17 +506,15 @@ var clientChatPageOnReady = function (e) {
         $innerChat.css('display', 'none');
         $minInnerChat.css('display', 'flex');
         setTimeout(function () {
-            var currentMsgNumber = Number(sessionStorage.getItem('bp-min-message-counter'));
-
             if (minLocationClass === 'min-bottom' || minLocationClass === 'min-top') {
                 commonUtilService.updateParentDimensions({
                     width: { value: chatWidgetStyling.width + 'px'},
-                    height: currentMsgNumber > 0 ? { auto: true } : { value: '0' }
+                    height: { auto: true }
                 });
             } else {
                 commonUtilService.updateParentDimensions({
                     width: { value: (chatWidgetStyling.width + 50) + 'px'},
-                    height: currentMsgNumber > 0 ? { auto: true } : { value: '0' }
+                    height: { auto: true }
                 });
             }
         });
