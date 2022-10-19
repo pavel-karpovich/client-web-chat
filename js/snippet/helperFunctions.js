@@ -40,9 +40,6 @@ var snippetHelperFunctions = function () {
         },
 
         isHidden: function(el) {
-            if (sessionStorage.getItem('bp-minimized') === 'true') {
-                return false;
-            }
             var width = el.offsetWidth,
                 height = el.offsetHeight,
                 tr = el.nodeName.toLowerCase() === "tr"

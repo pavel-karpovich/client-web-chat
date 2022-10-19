@@ -457,10 +457,11 @@ var snippetOnInitialize = function () {
                             /** special case for min snippet without unread messages */
                             if (parsed.data.height === '0px' || parsed.data.height === '0') {
                                 helper.addClass(spMinTab, 'show');
+                                spChatFrame.style.height = '1px';
                             } else {
                                 helper.removeClass(spMinTab, 'show');
+                                spChatFrame.style.height = parsed.data.height;
                             }
-                            spChatFrame.style.height = parsed.data.height;
                         }
                         if (parsed.data.width && !widgetConfiguration.isMobile()) {
                             spChatFrame.style.width = parsed.data.width;
