@@ -48,6 +48,9 @@ var snippetHelperFunctions = function () {
         },
 
         toggle: function(el) {
+            console.log('@@ toggle element: ', el);
+            console.log('@@ toggle isHidden ?', this.isHidden(el));
+            console.log('@@ --------------------');
             this.isHidden(el) ? this.show(el) : this.hide(el)
         },
 
