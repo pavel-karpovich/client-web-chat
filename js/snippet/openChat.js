@@ -69,8 +69,8 @@ var snippetOpenChat = function (open, deleteIframe, startSession) {
 
     var fake = document.querySelector('#sp-chat-fake');
 
-    var w = fakeTo.offsetWidth;
-    var h = fakeTo.offsetHeight;
+    var w = 0; // fakeTo.offsetWidth;
+    var h = 0; // fakeTo.offsetHeight;
     if (direction === "vertical") {
         open ? updateOffset(fake, h, w) : updateOffset(fake, w, h);
         if (open) {

@@ -118,6 +118,7 @@ var snippetOnInitialize = function () {
         snippetDraggable();
         var chatMinimized = sessionStorage.getItem('bp-minimized');
         if (chatMinimized === 'true') {
+            console.log('@@ start minimized from initialization');
             startMinimized();
         } else {
             var spChatFrame = document.querySelector('#sp-chat-frame');
